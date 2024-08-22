@@ -20,9 +20,9 @@ const Mode: Record<ModeDefault, ModeOptions> = {
     fontColor: [0, 0, 0],
   },
   set3: {
-    bgColor: [251, 253, 255],
-    borderColor: [0, 74, 135],
-    fontColor: [0, 200, 254],
+    bgColor: [51, 51, 51],
+    borderColor: [0, 86, 157],
+    fontColor: [123, 218, 243],
   },
   custome: {
     bgColor: [0, 0, 0],

@@ -71,7 +71,7 @@ const scrollTo = (id?: string) => {
       >
         <div class="flex flex-col justify-center items-center gap-3 my-2">
           <template v-for="(item, index) in menu" :key="index">
-            <a @click="scrollTo(item.id)" class="text-[18px] font-extrabold mt-[5px] w-full text-center">
+            <a @click="scrollTo(item.id)" class="text-[18px] font-extrabold mt-[5px] w-full text-center hover:opacity-50 cursor-pointer">
               {{ item.label }}
             </a>
           </template>
@@ -109,13 +109,13 @@ const scrollTo = (id?: string) => {
       </div>
       <div class="flex justify-center items-center w-[50px] h-[50px]">
         <i
-          class="pi pi-th-large"
+          class="pi pi-th-large cursor-pointer"
           style="font-size: 30px"
           v-if="!isOpen"
           @click="emit('menuVisable')"
         />
         <i
-          class="pi pi-times"
+          class="pi pi-times cursor-pointer"
           style="font-size: 30px"
           v-if="isOpen"
           @click="emit('menuVisable')"
