@@ -41,11 +41,15 @@ const scrollTo = (id?: string) => {
     return;
   }
 
+  const scrollDOM = document.getElementById('layout');
+
+  if (!scrollDOM) return;
+
   const element = document.getElementById(id);
 
   if (element) {
     const top = element.getBoundingClientRect().top - 78;
-    window.scrollBy({
+    scrollDOM.scrollBy({
       top,
       behavior: 'smooth',
     });
@@ -71,7 +75,10 @@ const scrollTo = (id?: string) => {
       >
         <div class="flex flex-col justify-center items-center gap-3 my-2">
           <template v-for="(item, index) in menu" :key="index">
-            <a @click="scrollTo(item.id)" class="text-[18px] font-extrabold mt-[5px] w-full text-center hover:opacity-50 cursor-pointer">
+            <a
+              @click="scrollTo(item.id)"
+              class="text-xl font-extrabold mt-[5px] w-full text-center hover:opacity-50 cursor-pointer"
+            >
               {{ item.label }}
             </a>
           </template>

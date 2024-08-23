@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <div id="test1" class="h-[500px] w-full mt-[70px]">
+    <div id="test1" class="h-[500px] w-full">
       首頁
     </div>
     <div id="test2" class="h-[500px] w-full ">

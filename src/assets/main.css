@@ -16,10 +16,15 @@ body {
   background-color: var(--background-color);
   color: var(--font-color);
   font-family: "Righteous", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 #app {
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
