@@ -1,14 +1,12 @@
 <script setup lang="ts">
+import AboutMe from './HomeView/AboutMe.vue';
+import SkillsAndTools from './HomeView/SkillsAndTools.vue';
 </script>
 
 <template>
-  <div>
-    <div id="test1" class="h-[500px] w-full">
-      首頁
-    </div>
-    <div id="test2" class="h-[500px] w-full ">
-      技能樹
-    </div>
+  <div class="flex flex-col gap-16">
+    <AboutMe />
+    <SkillsAndTools />
     <div id="test3" class="h-[500px] w-full \">
       專案作品
     </div>
