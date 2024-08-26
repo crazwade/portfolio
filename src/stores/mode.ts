@@ -31,6 +31,13 @@ const Mode: Record<ModeDefault, ModeOptions> = {
   }
 };
 
+const SvgFilter: Record<ModeDefault, string> = {
+  set1: 'invert(0%) sepia(7%) saturate(3135%) hue-rotate(317deg) brightness(110%) contrast(59%)',
+  set2: 'invert(85%) sepia(0%) saturate(0%) hue-rotate(20deg) brightness(99%) contrast(95%)',
+  set3: 'invert(16%) sepia(3%) saturate(18%) hue-rotate(342deg) brightness(98%) contrast(86%)',
+  custome: 'invert(14%) sepia(2%) saturate(0%) hue-rotate(42deg) brightness(98%) contrast(81%)',
+};
+
 export const useModeStore = defineStore('mode', {
   state: () => <{
     currentMode: ModeDefault;
@@ -57,7 +64,7 @@ export const useModeStore = defineStore('mode', {
       document.documentElement.style.setProperty('--background-color', `rgb(${option.bgColor})`);
       document.documentElement.style.setProperty('--border-color', `rgb(${option.borderColor})`);
       document.documentElement.style.setProperty('--font-color', `rgb(${option.fontColor})`);
-
+      document.documentElement.style.setProperty('--svg-filter', SvgFilter[mode]);
       if (mode === 'custome') {
         this.mode[mode].bgColor = option.bgColor;
         this.mode[mode].borderColor = option.borderColor;

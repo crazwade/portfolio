@@ -7,6 +7,7 @@ export default {
         backgroundColor: "var(--background-color)",
         borderColor: "var(--border-color)",
         fontColor: "var(--font-color)",
+        filterColor: "var(--svg-filter)",
       }
     },
   },
