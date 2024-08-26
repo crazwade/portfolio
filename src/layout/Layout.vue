@@ -20,7 +20,7 @@ const scrollTo = () => {
       <slot />
     </div>
     <!-- goto top -->
-    <div class="scrollTo fixed bottom-5 right-5 cursor-pointer p-2 opacity-80 hover:opacity-100" :class="{ 'blur-sm' : isOpen }">
+    <div class="fixed bottom-5 right-5 cursor-pointer bg-borderColor p-2 opacity-80 hover:opacity-100" :class="{ 'blur-sm' : isOpen }">
       <i
         class="pi pi-angle-double-up"
         style="font-size: 30px"
@@ -33,7 +33,5 @@ const scrollTo = () => {
 </template>
 
 <style lang="scss" scoped>
-.scrollTo {
-  background-color: var(--border-color);
-}
+
 </style>
