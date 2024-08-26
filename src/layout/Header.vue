@@ -6,11 +6,11 @@ const modeStroe = useModeStore();
 const menu: { label: string, id: string }[] = [
   {
     label: '首頁',
-    id: 'test1',
+    id: 'aboutme',
   },
   {
     label: '技能樹',
-    id: 'test2',
+    id: 'SkillsAndTools',
   },
   {
     label: '專案作品',
@@ -71,7 +71,7 @@ const scrollTo = (id?: string) => {
     <Transition name="slide">
       <div
         v-if="isOpen"
-        class="menu fixed top-0 left-0 mt-[78px] border-b-[8px] w-full box-border flex flex-col"
+        class="fixed top-0 left-0 mt-[78px] border-b-[8px] border-x-[8px] bg-backgroundColor border-borderColor w-full box-border flex flex-col"
       >
         <div class="flex flex-col justify-center items-center gap-3 my-2">
           <template v-for="(item, index) in menu" :key="index">
@@ -94,7 +94,7 @@ const scrollTo = (id?: string) => {
               <button
                 @click="modeStroe.changeMode(key)"
                 v-if="key === modeStroe.currentMode"
-                class="selectMod px-2"
+                class="bg-borderColor px-2"
               >
                 {{ key }}
               </button>
@@ -109,9 +109,9 @@ const scrollTo = (id?: string) => {
     </Transition>
     <!-- header -->
     <div
-      class="header fixed top-0 left-0 w-full h-[78px] border-t-[8px] box-border bg-gray-900 flex justify-between items-center"
+      class="fixed top-0 left-0 w-full h-[78px] border-t-[8px] border-x-[8px] bg-backgroundColor border-borderColor box-border flex justify-between items-center"
     >
-      <div class="logo w-[50px] h-[50px] ml-[10px] font-extrabold text-2xl flex justify-center items-center">
+      <div class="bg-borderColor text-backgroundColor w-[50px] h-[50px] ml-[10px] font-extrabold text-2xl flex justify-center items-center">
         JW
       </div>
       <div class="flex justify-center items-center w-[50px] h-[50px]">
@@ -132,21 +132,6 @@ const scrollTo = (id?: string) => {
 </template>
 
 <style lang="scss" scoped>
-.selectMod {
-  background-color: var(--border-color);
-}
-
-.logo {
-  background-color: var(--border-color);
-}
-
-.menu, .header {
-  border-left: 8px;
-  border-right: 8px;
-  border-style: solid;
-  border-color: var(--border-color);
-  background-color: var(--background-color);
-}
 
 .slide-enter-active {
   transition: all 0.5s ease-out;
