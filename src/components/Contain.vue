@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div class="flex flex-col justify-center items-center">
-    <div class="text-4xl border-borderColor border-b-[3px] pb-2">
+    <div class="text-4xl border-borderColor border-b-[3px] pb-2 mb-8">
       {{ title }}
     </div>
     <slot />
