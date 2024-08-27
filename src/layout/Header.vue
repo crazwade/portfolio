@@ -14,7 +14,7 @@ const menu: { label: string, id: string }[] = [
   },
   {
     label: '專案作品',
-    id: 'test3',
+    id: 'SideProject',
   },
   {
     label: '履歷',
