@@ -66,7 +66,7 @@ const tools = [
     <Contain
       title="工具與技能樹"
     >
-      <div class="grid grid-cols-3 xl:grid-cols-9 lg:grid-cols-7 md:grid-cols-5 gap-5 mt-8">
+      <div class="grid grid-cols-3 xl:grid-cols-9 lg:grid-cols-7 md:grid-cols-5 gap-5">
         <div
           v-for="(item, index) in tools"
           :key="index"
