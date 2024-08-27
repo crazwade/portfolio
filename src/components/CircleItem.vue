@@ -23,7 +23,6 @@ withDefaults(defineProps<{
   >
     <i
       v-if="type === 'icon' || type === 'mail'"
-      class="pi"
       :class="[
         `${icon}`,
         size === 'large' ? 'text-[50px]' : 'text-[30px]',
