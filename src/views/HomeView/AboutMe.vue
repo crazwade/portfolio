@@ -15,6 +15,12 @@ type ItemType = {
   url: string;
 };
 
+const aboutme = {
+  name: 'Jacky Wu',
+  title: '前端工程師',
+  info: '“Run, don‘t walk! Either you’re running for food, or running from being food.” - NVIDIA CEO Jensen Huang',
+};
+
 const socials: ItemType[] = [
   {
     type: 'icon',
@@ -43,11 +49,11 @@ const socials: ItemType[] = [
   <div id="aboutme" class="flex justify-center items-center flex-col py-5 px-10 lg:px-40 xl:px-80">
     <div class="h-full flex flex-col md:flex-row md:items-center">
       <div class="h-full flex flex-col gap-5">
-        <p class="text-8xl md:whitespace-nowrap">Jacky Wu</p>
-        <p class="text-4xl">前端工程師</p>
+        <p class="text-8xl md:whitespace-nowrap">{{ aboutme.name}}</p>
+        <p class="text-4xl">{{ aboutme.title }}</p>
       </div>
       <span class="text-xl mt-5 md:mt-0 md:pl-10">
-        The joy of coding is about creating these virtual spaces and enchanting them to behave as I would like. - Dan Abramov
+        {{ aboutme.info }}
       </span>
     </div>
     <div class="w-full flex justify-start mt-5 gap-3">
