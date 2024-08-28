@@ -22,7 +22,7 @@ const hrefTo = (url: string) => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 w-full md:w-1/2">
+  <div class="flex flex-col gap-3 w-full md:w-1/2">
     <!-- sideproject title -->
     <div class="text-3xl">
       {{ info.name }}
