@@ -45,6 +45,9 @@ const changeimg = (action: 'next' | 'previous') => {
     >
       <i class="pi pi-chevron-right" />
     </button>
+    <div class="absolute bottom-0 right-0 bg-backgroundColor text-fontColor px-2 py-1">
+      {{ imageIndex + 1 }} / {{ images.length }}
+    </div>
   </div>
 </template>
 
