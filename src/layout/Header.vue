@@ -18,7 +18,7 @@ const menu: { label: string, id: string }[] = [
   },
   {
     label: '履歷',
-    id: 'test4',
+    id: 'Resume',
   },
   {
     label: '聯繫我',
