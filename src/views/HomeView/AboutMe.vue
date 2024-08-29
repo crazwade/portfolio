@@ -46,7 +46,7 @@ const socials: ItemType[] = [
 </script>
 
 <template>
-  <div id="aboutme" class="flex justify-center items-center flex-col py-5 px-10 lg:px-40 xl:px-80">
+  <div id="Aboutme" class="flex justify-center items-center flex-col py-5 px-10 lg:px-40 xl:px-80">
     <div class="h-full flex flex-col md:flex-row md:items-center">
       <div class="h-full flex flex-col gap-5">
         <p class="text-8xl md:whitespace-nowrap">{{ aboutme.name}}</p>
