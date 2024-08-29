@@ -6,7 +6,11 @@ const modeStroe = useModeStore();
 const menu: { label: string, id: string }[] = [
   {
     label: '首頁',
-    id: 'aboutme',
+    id: 'Aboutme',
+  },
+  {
+    label: '自傳',
+    id: 'Autobiography',
   },
   {
     label: '技能樹',
@@ -22,7 +26,7 @@ const menu: { label: string, id: string }[] = [
   },
   {
     label: '聯繫我',
-    id: 'test5',
+    id: 'ContactMe',
   },
 ];
 
