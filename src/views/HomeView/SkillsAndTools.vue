@@ -1,64 +1,13 @@
 <script setup lang='ts'>
 import Contain from '../../components/Contain.vue';
 import CircleItem from '../../components/CircleItem.vue';
-import { svgs } from '../../assets/skillandtools';
+import { useI18n } from 'vue-i18n';
+import { useDataStore } from '../../stores/data';
 
-const tools = [
-  {
-    label: 'JavaScript',
-    svg: svgs.js,
-  },
-  {
-    label: 'TypeScript',
+const dataStore = useDataStore();
+const { t } = useI18n();
 
-    svg: svgs.ts,
-  },
-  {
-    label: 'Vue2',
 
-    svg: svgs.vue,
-  },
-  {
-    label: 'Vue3',
-
-    svg: svgs.vue,
-  },
-  {
-    label: 'Vite',
-
-    svg: svgs.vite,
-  },
-  {
-    label: 'Tailwind Css',
-
-    svg: svgs.tailwindcss,
-  },
-  {
-    label: 'Scss',
-
-    svg: svgs.scss,
-  },
-  {
-    label: 'Git',
-
-    svg: svgs.git,
-  },
-  {
-    label: 'ESLint',
-
-    svg: svgs.eslint,
-  },
-  {
-    label: 'Jira',
-
-    svg: svgs.jira,
-  },
-  {
-    label: 'Element-Plus',
-
-    svg: svgs.elementplus,
-  },
-];
 </script>
 
 <template>
@@ -68,7 +17,7 @@ const tools = [
     >
       <div class="grid grid-cols-3 xl:grid-cols-9 lg:grid-cols-7 md:grid-cols-5 gap-5">
         <div
-          v-for="(item, index) in tools"
+          v-for="(item, index) in dataStore.getTools"
           :key="index"
           class="flex flex-col items-center"
         >

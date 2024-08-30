@@ -8,6 +8,9 @@ import jira from './jira.svg';
 import vue from './vue.svg';
 import scss from './scss.svg';
 import tailwindcss from './tailwindcss.svg';
+import Pinia from './pinia.svg';
+import i18n from './i18n.svg';
+import vitest from './vitest.svg';
 
 export const svgs = {
   elementplus,
@@ -19,5 +22,8 @@ export const svgs = {
   jira,
   vue,
   scss,
-  tailwindcss
+  tailwindcss,
+  Pinia,
+  i18n,
+  vitest
 };
