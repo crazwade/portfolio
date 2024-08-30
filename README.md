@@ -7,10 +7,13 @@ Hi 👋, I'm Jacky Wu!  這是我的個人形象網站
 [![My Skills](https://skillicons.dev/icons?i=ts,vue,vite,tailwindcss,pinia,scss,vscode)](https://skillicons.dev)
 
 ## PC
+
 [<img src="https://github.com/user-attachments/assets/9a84d5bb-7ea1-4d0a-ba45-a238e78beae0" height="500"/>](image.png)
 [<img src="https://github.com/user-attachments/assets/516fb4db-efe8-47cc-ba1a-5b74328cb41d" height="500"/>](image.png)
+[<img src="https://github.com/user-attachments/assets/6168dcc5-cfe1-4ac4-86dc-842cd5930f01" height="500"/>](image.png)
 
 ## Mobile
+
 <div style='display: flex;'> 
   <img src="https://github.com/user-attachments/assets/e8624175-03ec-4c52-8e13-b03a6f928b90" height="400" alt="crazwade" /> 
   <img src="https://github.com/user-attachments/assets/25acf8bf-edb3-4bc9-83fb-8a9f64108e05" height="400" alt="crazwade" /> 
