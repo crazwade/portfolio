@@ -32,21 +32,24 @@ const changeimg = (action: 'next' | 'previous') => {
 </script>
 
 <template>
-  <div class="relative h-52 w-full md:w-1/2 overflow-hidden flex justify-center items-center">
+  <div
+    class="relative h-64 w-full md:w-1/2 overflow-hidden flex justify-center items-center border-dotted border-[4px] border-borderColor p-1"
+    v-if="images.length > 0"
+  >
     <Transition name="fade">
-      <img v-if="aniImage" :src="images[imageIndex]" alt="" srcset="" class="w-full object-cover">
+      <img v-if="aniImage" :src="images[imageIndex]" alt="" srcset="" class="w-auto h-full object-cover">
     </Transition>
     <button
-      class="absolute top-1/2 left-2 -translate-y-1/2 w-[30px] h-[30px] opacity-80 hover:opacity-95 bg-gray-500 rounded-full flex justify-center items-center"
+      class="absolute top-1/2 left-0 -translate-y-1/2 w-[100px] h-full flex justify-start items-center"
       @click="changeimg('previous')"
     >
-      <i class="pi pi-chevron-left" />
+      <i class="pi pi-chevron-left text-borderColor text-5xl" />
     </button>
     <button
-      class="absolute top-1/2 right-2 -translate-y-1/2 w-[30px] h-[30px] opacity-80 hover:opacity-95 bg-gray-500 rounded-full flex justify-center items-center"
+      class="absolute top-1/2 right-0 -translate-y-1/2 w-[100px] h-full flex justify-end items-center"
       @click="changeimg('next')"
     >
-      <i class="pi pi-chevron-right" />
+      <i class="pi pi-chevron-right text-borderColor text-5xl" />
     </button>
     <div class="absolute bottom-0 right-0 bg-backgroundColor text-fontColor px-2 py-1">
       {{ imageIndex + 1 }} / {{ images.length }}
