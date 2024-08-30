@@ -1,5 +1,8 @@
 <script setup lang='ts'>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps<{
   images: string[]
@@ -48,6 +51,12 @@ const changeimg = (action: 'next' | 'previous') => {
     <div class="absolute bottom-0 right-0 bg-backgroundColor text-fontColor px-2 py-1">
       {{ imageIndex + 1 }} / {{ images.length }}
     </div>
+  </div>
+  <div
+    class="relative h-64 w-full md:w-1/2 overflow-hidden flex justify-center items-center border-dotted border-[4px] border-borderColor p-1"
+    v-else
+  >
+    {{ t('專案因保密性不方便公開展示') }}
   </div>
 </template>
 

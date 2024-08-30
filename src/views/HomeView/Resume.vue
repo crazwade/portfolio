@@ -5,8 +5,9 @@ import pdf1 from '../../assets/resume/pdf1.png';
 import pdf1e from '../../assets/resume/pdf1-e.png';
 import pdf2 from '../../assets/resume/pdf2.png';
 import pdf2e from '../../assets/resume/pdf2-e.png';
+import { useI18n } from 'vue-i18n';
 
-const currentIndex = ref(0);
+const { t, locale } = useI18n();
 
 const resume = [
   pdf1, pdf2
@@ -29,7 +30,7 @@ const changeimg = (action: 'next' | 'previous') => {
 <template>
   <div id="Resume">
     <Contain
-      title="履歷"
+      :title="t('menu.Resume')"
     >
       <div class="flex flex-col gap-3 w-full px-6">
         <div class="relative w-full h-full flex justify-center">
@@ -52,13 +53,13 @@ const changeimg = (action: 'next' | 'previous') => {
             class="flex flex-row justify-between items-center p-2 text-backgroundColor bg-fontColor gap-2 cursor-pointer hover:opacity-80 select-none"
           >
             <i class="pi pi-download"></i>
-            下載 PDF
+            {{ t('下載PDF') }}
           </div>
           <div
             class="flex flex-row justify-between items-center p-2 text-fontColor bg-backgroundColor border-[1px] border-fontColor gap-2 cursor-pointer hover:opacity-80 select-none"
           >
             <i class="pi pi-eye"></i>
-            線上查看
+            {{ t('查看') }}
           </div>
         </div>
       </div>

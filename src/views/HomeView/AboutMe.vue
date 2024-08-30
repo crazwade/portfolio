@@ -49,11 +49,11 @@ const socials: ItemType[] = [
   <div id="Aboutme" class="flex justify-center items-center flex-col py-5 px-10 lg:px-40 xl:px-80">
     <div class="h-full flex flex-col md:flex-row md:items-center">
       <div class="h-full flex flex-col gap-5">
-        <p class="text-8xl md:whitespace-nowrap">{{ aboutme.name}}</p>
-        <p class="text-4xl">{{ aboutme.title }}</p>
+        <p class="text-8xl md:whitespace-nowrap">{{ t('aboutme.name')}}</p>
+        <p class="text-4xl">{{ t('aboutme.title') }}</p>
       </div>
       <span class="text-xl mt-5 md:mt-0 md:pl-10">
-        {{ aboutme.info }}
+        {{ t('aboutme.info') }}
       </span>
     </div>
     <div class="w-full flex justify-start mt-5 gap-3">

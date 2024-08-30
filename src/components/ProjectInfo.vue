@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import { useI18n } from 'vue-i18n';
 import Tag from './Tag.vue';
 
 const info = {
@@ -25,7 +26,7 @@ const hrefTo = (url: string) => {
   <div class="flex flex-col gap-3 w-full md:w-1/2">
     <!-- sideproject title -->
     <div class="text-3xl">
-      {{ info.name }}
+      {{ t(`SideProject.name.${data.name}`) }}
     </div>
     <!-- sideproject tags -->
     <div class="flex flex-wrap gap-2">
@@ -35,7 +36,7 @@ const hrefTo = (url: string) => {
     </div>
     <!-- sideproject info -->
     <div class="text-md font-bold">
-      {{ info.info }}
+      {{ t(`SideProject.info.${data.info}`) }}
     </div>
     <!-- sideproject link -->
     <div class="flex flex-wrap gap-2">

@@ -5,7 +5,7 @@ import Contain from '../../components/Contain.vue';
 <template>
   <div id="Autobiography" class="px-10">
     <Contain
-      title="自傳"
+      :title="t('menu.Autobiography')"
     >
       <div class="flex flex-col justify-center items-center text-lg">
         我是吳國揚 (Jacky Wu)，2019 年畢業於國立高雄大學資訊管理學系。高中時期曾赴美留學一年，大學期間曾轉學從義守大學至國立高雄大學，豐富的求學經歷培養了我獨立思考、自我檢討的習慣。

@@ -1,5 +1,11 @@
 <script setup lang='ts'>
 import { useModeStore } from '../stores/mode';
+import { useDataStore } from '../stores/data';
+import { langName } from '../lang';
+import { useI18n } from 'vue-i18n';
+import type { Lang } from '../lang';
+
+const { locale, t } = useI18n();
 
 const modeStroe = useModeStore();
 
@@ -62,6 +68,14 @@ const scrollTo = (id?: string) => {
   emit('menuVisable');
 };
 
+/**
+ * Change locale of i18n
+ * @param {"zh-TW" | "en-US"} lang - the locale to change
+ */
+const changeLang = (lang: Lang) => {
+  locale.value = lang;
+};
+
 </script>
 
 <template>
@@ -83,7 +97,7 @@ const scrollTo = (id?: string) => {
               @click="scrollTo(item.id)"
               class="text-xl font-extrabold mt-[5px] w-full text-center hover:opacity-50 cursor-pointer"
             >
-              {{ item.label }}
+              {{ t(`${item.label}`) }}
             </a>
           </template>
         </div>

@@ -1,0 +1,48 @@
+{
+  "下載PDF": "Download PDF",
+  "查看": "View",
+  "專案因保密性不方便公開展示": "The details of this project are confidential, and therefore cannot be shared publicly.",
+  "待開發": "Under development",
+  "menu": {
+    "Aboutme": "About Me",
+    "Autobiography": "Autobiography",
+    "SkillsAndTools": "Tools",
+    "SideProject": "Projects",
+    "Resume": "Resume",
+    "ContactMe": "Contact"
+  },
+  "aboutme": {
+    "name": "Jacky Wu",
+    "title": "Frontend Developer",
+    "info": "“Run, don‘t walk! Either you’re running for food, or running from being food.” - NVIDIA CEO Jensen Huang"
+  },
+  "Autobiography": {
+    "info": [
+      "I am Jacky Wu, a graduate of the Department of Information Management at National University of Kaohsiung in 2019. During my high school years, I studied abroad in the United States for one year. In college, I transferred from I-Shou University to National University of Kaohsiung, and my diverse academic experiences have cultivated my ability to think independently and reflect on myself.",
+      "During my college years, I was enthusiastic about practical courses and actively participated in practical projects. In my senior year, I had the opportunity to be responsible for developing the international student recruitment system for the university, accumulating full-stack development experience and developing an interest in front-end development.",
+      "After graduation, I continued to devote myself to the field of front-end development and have accumulated three years of work experience. I specialize in the Vue framework, responsible for system page design, writing front-end specification documents, user interaction design, and back-end API integration. At the same time, I actively learn new technologies, proficient in TypeScript, Vue3, Eslint, and other tools, and can use these technologies to optimize the development process and improve development efficiency.",
+      "In the future, I hope to become an excellent engineer and gradually achieve the following goals:",
+      "1-5 years: Become an engineer who can independently solve problems and learn quickly.",
+      "5-8 years: Become a technical supervisor with leadership skills who can lead a team to complete projects.",
+      "After 8 years: Become a technology expert who introduces new technologies and improves team performance."
+    ]
+  },
+  "SideProject": {
+    "name": {
+      "撲克牌組合分析器": "Poker Combination Analyzer",
+      "後台管理系統": "Backstage Management System",
+      "Log日誌查看系統": "LogViewer",
+      "星球作品集": "Portfolio Showcase",
+      "MiniGamePlayground": "Mini Game Playground",
+      "國立高雄大學線上申請系統": "NUK International Student Application System"
+    },
+    "info": {
+      "撲克牌組合分析器info": "An interactive web application that demonstrates various combinations of poker cards and provides detailed analysis. Users can easily explore the results through an intuitive interface.",
+      "後台管理系統info": "Designed for administering operations involving data table display, manipulation, and export. Utilizes the Element Plus UI library to provide a rich user interface.",
+      "Log日誌查看系統info": "A log viewer system designed specifically for backend engineers in the company. It allows viewing and analyzing a large volume of log records.",
+      "星球作品集info": "Evolved from my first Vue.js project in 2021. The project features a visually stunning 3D planetary display achieved through CSS3 transforms and is optimized for various screen sizes. Users can dynamically adjust the number and position of planets.",
+      "MiniGamePlaygroundinfo": "A collection of mini-games developed using Vue 3. It includes classic games like 1A2B, Minesweeper, and a Canvas drawing board.",
+      "國立高雄大學線上申請系統info": "Designed for international students and administrative staff. The system facilitates online applications and provides comprehensive front-end and back-end functionalities to streamline the application process."
+    }
+  }
+}

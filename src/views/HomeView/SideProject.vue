@@ -52,7 +52,7 @@ const projects = [
 <template>
   <div id="SideProject" class="px-10">
     <Contain
-      :title="'專案作品'"
+      :title="t('menu.SideProject')"
     >
       <div class="flex flex-col gap-12">
         <div

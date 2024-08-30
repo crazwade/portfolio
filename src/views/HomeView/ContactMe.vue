@@ -43,7 +43,7 @@ const socials: ItemType[] = [
 <template>
   <div id="ContactMe">
     <Contain
-      title="聯繫我"
+      :title="t('menu.ContactMe')"
     >
       <div class="flex flex-col justify-center items-center">
         <div class="flex flex-row gap-3">

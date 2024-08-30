@@ -64,7 +64,7 @@ const tools = [
 <template>
   <div id="SkillsAndTools">
     <Contain
-      title="工具與技能樹"
+      :title="t('menu.SkillsAndTools')"
     >
       <div class="grid grid-cols-3 xl:grid-cols-9 lg:grid-cols-7 md:grid-cols-5 gap-5">
         <div
