@@ -3,6 +3,8 @@ import { markRaw } from "vue";
 import type { Component } from 'vue';
 import { svgs } from '../assets/skillandtools';
 
+import { imageLoader } from '@/common/imageLoader';
+
 import AboutMe from '../views/HomeView/AboutMe.vue';
 import Autobiography from '../views/HomeView/Autobiography.vue';
 import SkillsAndTools from '../views/HomeView/SkillsAndTools.vue';
@@ -61,6 +63,7 @@ export const useDataStore = defineStore('data', {
       images: string[],
     }[];
     socials: SocialType[]
+    assets: string[];
   }>({
     menu: [
       {
@@ -268,6 +271,22 @@ export const useDataStore = defineStore('data', {
         mail: 'jackywu526@gmail.com',
       }
     ],
+    assets: [
+      poker1,
+      poker2,
+      pokerVideo,
+      BMS1,
+      BMS2,
+      BMSVideo,
+      log1,
+      log2,
+      LogVideo,
+      planetVideo,
+      pg1,
+      pg2,
+      pg3,
+      PGVideo
+    ]
   }),
   getters: {
     getMenu: (state) => state.menu,
@@ -276,10 +295,10 @@ export const useDataStore = defineStore('data', {
     getSocials: (state) => state.socials,
   },
   actions: {
-    handlehref: (payload: {
+    handlehref(payload: {
       url?: string;
       mail?: string;
-    }) => {
+    }) {
       const { url, mail } = payload;
 
       if (url) {
@@ -289,5 +308,11 @@ export const useDataStore = defineStore('data', {
         window.open(`mailto:${mail}`);
       }
     },
+    preloadImg() {
+      imageLoader(this.assets, (loaded, total) => {
+        const progressBar = `圖片預載入進度:${loaded}/${total}`;
+        console.log(progressBar);
+      });
+    }
   },
 });
