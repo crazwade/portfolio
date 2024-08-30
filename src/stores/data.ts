@@ -69,11 +69,6 @@ export const useDataStore = defineStore('data', {
         components: markRaw(AboutMe)
       },
       {
-        label: 'menu.Autobiography',
-        id: 'Autobiography',
-        components: markRaw(Autobiography)
-      },
-      {
         label: 'menu.SkillsAndTools',
         id: 'SkillsAndTools',
         components: markRaw(SkillsAndTools)
@@ -87,6 +82,11 @@ export const useDataStore = defineStore('data', {
         label: 'menu.Resume',
         id: 'Resume',
         components: markRaw(Resume)
+      },
+      {
+        label: 'menu.Autobiography',
+        id: 'Autobiography',
+        components: markRaw(Autobiography)
       },
       {
         label: 'menu.ContactMe',
