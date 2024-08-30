@@ -37,7 +37,7 @@ const changeimg = (action: 'next' | 'previous') => {
     v-if="images.length > 0"
   >
     <Transition name="fade">
-      <img v-if="aniImage" :src="images[imageIndex]" alt="" srcset="" class="w-auto h-full object-cover">
+      <img v-if="aniImage" :src="images[imageIndex]" alt="" srcset="" class="w-auto h-full object-cover" rel="preload">
     </Transition>
     <button
       class="absolute top-1/2 left-0 -translate-y-1/2 w-[100px] h-full flex justify-start items-center"
