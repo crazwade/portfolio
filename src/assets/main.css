@@ -19,8 +19,8 @@ body {
   color: var(--font-color);
   font-family: "Righteous", sans-serif;
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 #app {
