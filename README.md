@@ -8,9 +8,9 @@ Hi 👋, I'm Jacky Wu!  這是我的個人形象網站
 
 ## PC
 
-[<img src="https://github.com/user-attachments/assets/9a84d5bb-7ea1-4d0a-ba45-a238e78beae0" height="500"/>](image.png)
-[<img src="https://github.com/user-attachments/assets/516fb4db-efe8-47cc-ba1a-5b74328cb41d" height="500"/>](image.png)
-[<img src="https://github.com/user-attachments/assets/6168dcc5-cfe1-4ac4-86dc-842cd5930f01" height="500"/>](image.png)
+[<img src="https://github.com/user-attachments/assets/f2fae869-c3ac-4623-b98b-5278ff396433" height="500"/>](image.png)
+[<img src="https://github.com/user-attachments/assets/4a49b441-1a17-4eeb-989b-150ec50ead3d" height="500"/>](image.png)
+[<img src="https://github.com/user-attachments/assets/9c734c79-0d64-4d29-862f-47044295f8c3" height="500"/>](image.png)
 
 ## Mobile
 
