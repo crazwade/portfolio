@@ -60,16 +60,18 @@ export const useModeStore = defineStore('mode', {
       this.setMode(mode, Mode[mode]);
     },
     setMode(mode: ModeDefault, option: ModeOptions) {
+      if (mode === 'custome') {
+        alert('待開發 / Under development ...');
+        // this.mode[mode].bgColor = option.bgColor;
+        // this.mode[mode].borderColor = option.borderColor;
+        // this.mode[mode].fontColor = option.fontColor;
+        return;
+      }
       this.currentMode = mode;
       document.documentElement.style.setProperty('--background-color', `rgb(${option.bgColor})`);
       document.documentElement.style.setProperty('--border-color', `rgb(${option.borderColor})`);
       document.documentElement.style.setProperty('--font-color', `rgb(${option.fontColor})`);
       document.documentElement.style.setProperty('--svg-filter', SvgFilter[mode]);
-      if (mode === 'custome') {
-        this.mode[mode].bgColor = option.bgColor;
-        this.mode[mode].borderColor = option.borderColor;
-        this.mode[mode].fontColor = option.fontColor;
-      }
     }
   },
 });
