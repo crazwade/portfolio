@@ -40,18 +40,23 @@ const changeimg = (action: 'next' | 'previous') => {
       <img v-if="aniImage" :src="images[imageIndex]" alt="" srcset="" class="w-auto h-full object-cover" rel="preload">
     </Transition>
     <button
+      v-if="images.length > 1"
       class="absolute top-1/2 left-0 -translate-y-1/2 w-[100px] h-full flex justify-start items-center"
       @click="changeimg('previous')"
     >
       <i class="pi pi-chevron-left text-borderColor text-5xl" />
     </button>
     <button
+      v-if="images.length > 1"
       class="absolute top-1/2 right-0 -translate-y-1/2 w-[100px] h-full flex justify-end items-center"
       @click="changeimg('next')"
     >
       <i class="pi pi-chevron-right text-borderColor text-5xl" />
     </button>
-    <div class="absolute bottom-0 right-0 bg-backgroundColor text-fontColor px-2 py-1">
+    <div
+      v-if="images.length > 1"
+      class="absolute bottom-0 right-0 bg-backgroundColor text-fontColor px-2 py-1"
+    >
       {{ imageIndex + 1 }} / {{ images.length }}
     </div>
   </div>
