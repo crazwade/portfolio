@@ -77,7 +77,7 @@ const changeLang = (lang: Lang) => {
         </div>
         <div class="flex justify-between items-center mb-3 mt-8 mx-5">
           <!-- 語言設定 -->
-          <div class="flex flex-wrap justify-end">
+          <div class="flex flex-wrap justify-start">
             <template v-for="(lang, key) in langName" :key="key">
               <button
                 @click="changeLang(lang)"

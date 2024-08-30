@@ -1,61 +1,46 @@
-# portfolio
+# My Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Hi 👋, I'm Jacky Wu!  這是我的個人形象網站
 
-## Recommended IDE Setup
+## Build
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[![My Skills](https://skillicons.dev/icons?i=ts,vue,vite,tailwindcss,pinia,scss,vscode)](https://skillicons.dev)
 
-## Type Support for `.vue` Imports in TS
+## PC
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+[<img src="https://github.com/user-attachments/assets/f2fae869-c3ac-4623-b98b-5278ff396433" height="500"/>](image.png)
+[<img src="https://github.com/user-attachments/assets/4a49b441-1a17-4eeb-989b-150ec50ead3d" height="500"/>](image.png)
+[<img src="https://github.com/user-attachments/assets/9c734c79-0d64-4d29-862f-47044295f8c3" height="500"/>](image.png)
 
-## Customize configuration
+## Mobile
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+<div style='display: flex;'> 
+  <img src="https://github.com/user-attachments/assets/e8624175-03ec-4c52-8e13-b03a6f928b90" height="400" alt="crazwade" /> 
+  <img src="https://github.com/user-attachments/assets/25acf8bf-edb3-4bc9-83fb-8a9f64108e05" height="400" alt="crazwade" /> 
+  <img src="https://github.com/user-attachments/assets/c413234c-69ff-4866-a07c-2ace5fa02bc2" height="400" alt="crazwade" /> 
+</div>
 
-## Project Setup
+## 資料改寫
 
-```sh
-npm install
+### i18n 中英文檔
+- 由 src / lang 的中英文資訊產生
+  - 目前只支援 en.json(英文) / zh.json(中文)
+
+### store 資料
+- 畫面資料由 src / stores / data.ts 統一畫面資料處理
+  - 首頁／自傳／技能樹／專案作品／履歷 內容 
+
+## 建置
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
 npm run build
 ```
+- dist 資料夾就是完成的專案
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## 技術堆疊
+- Vue 3
+- TypeScript
+- Vite
+- Pinia
+- Eslint
+- TailwindCSS
+- Element Plus

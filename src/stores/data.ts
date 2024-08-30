@@ -241,8 +241,8 @@ export const useDataStore = defineStore('data', {
         info: '國立高雄大學線上申請系統info',
         images: [],
         link: {
-          demo: 'https://www.google.com/',
-          repo: 'https://www.google.com/',
+          demo: '',
+          repo: '',
         }
       },
     ],
