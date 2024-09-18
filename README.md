@@ -53,4 +53,3 @@ npm run build
 - Pinia
 - Eslint
 - TailwindCSS
-- Element Plus
