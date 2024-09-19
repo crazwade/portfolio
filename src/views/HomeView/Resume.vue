@@ -6,8 +6,10 @@ import resumeE from '../../assets/resume/resume-e.png';
 import resumeCPDF from '../../assets/resume/履歷.pdf';
 import resumeEPDF from '../../assets/resume/resume.pdf';
 import { useI18n } from 'vue-i18n';
+import { cvHref } from '../../common/cvHref';
 
 const { t, locale } = useI18n();
+const lang = ref<'zh-TW' | 'en-US'>('zh-TW');
 
 const resume = ref([
   resumeC, resumeE
@@ -18,12 +20,14 @@ watch(() => locale.value, () => {
     resume.value = [
       resumeE, resumeC
     ];
+    lang.value = 'en-US';
   }
 
   if (locale.value  === 'zh-TW') {
     resume.value = [
       resumeC, resumeE
     ];
+    lang.value = 'zh-TW';
   }
 });
 
@@ -36,9 +40,6 @@ const downloadPDFs = () => {
   document.body.removeChild(link);
 };
 
-const hrefTo = (url: string) => {
-  window.open(url, '_blank');
-};
 </script>
 
 <template>
@@ -64,7 +65,7 @@ const hrefTo = (url: string) => {
           </div>
           <div
             class="flex flex-row justify-between items-center p-2 text-fontColor bg-backgroundColor border-[1px] border-fontColor gap-2 cursor-pointer hover:opacity-80 select-none"
-            @click="hrefTo('https://crazwade.github.io/profile/')"
+            @click="cvHref(lang)"
           >
             <i class="pi pi-eye"></i>
             {{ t('查看') }}

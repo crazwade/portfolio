@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import { ref, watch } from 'vue';
 import Contain from '../../components/Contain.vue';
 import CircleItem from '../../components/CircleItem.vue';
 import { useI18n } from 'vue-i18n';
@@ -6,7 +7,13 @@ import { useDataStore } from '../../stores/data';
 
 const dataStore = useDataStore();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
+
+const lang = ref<'zh-TW' | 'en-US'>('zh-TW');
+
+watch(() => locale.value, (val) => {
+  lang.value = val === 'zh-TW' ? 'zh-TW' : 'en-US';
+});
 
 </script>
 
@@ -24,7 +31,7 @@ const { t } = useI18n();
               :icon="item.type !== 'text' ? item.icon : undefined"
               :text="item.type === 'text' ? item.text : undefined"
               :needPointer="true"
-              @click="dataStore.handlehref(item)"
+              @click="dataStore.handlehref(item, lang)"
             />
           </template>
         </div>

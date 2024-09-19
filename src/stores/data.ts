@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 import { markRaw } from "vue";
 import type { Component } from 'vue';
 import { svgs } from '../assets/skillandtools';
+import { cvHref } from '../common/cvHref';
 
 import { imageLoader } from '@/common/imageLoader';
 
@@ -298,14 +299,23 @@ export const useDataStore = defineStore('data', {
     handlehref(payload: {
       url?: string;
       mail?: string;
-    }) {
-      const { url, mail } = payload;
+      text?: string;
+    }, lang: 'zh-TW' | 'en-US') {
+      const { url, mail, text } = payload;
+
+      if (text && text === 'CV') {
+        cvHref(lang);
+        return;
+      }
 
       if (url) {
         window.open(url, '_blank');
+        return;
       }
+
       if (mail) {
         window.open(`mailto:${mail}`);
+        return;
       }
     },
     preloadImg() {
