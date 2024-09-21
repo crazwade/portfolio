@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 import { markRaw } from "vue";
 import type { Component } from 'vue';
 import { svgs } from '../assets/skillandtools';
+import { cvHref } from '../common/cvHref';
 
 import { imageLoader } from '@/common/imageLoader';
 
@@ -11,6 +12,7 @@ import SkillsAndTools from '../views/HomeView/SkillsAndTools.vue';
 import SideProject from '../views/HomeView/SideProject.vue';
 import Resume from '../views/HomeView/Resume.vue';
 import ContactMe from '../views/HomeView/ContactMe.vue';
+import WorkExperience from '../views/HomeView/WorkExperience.vue';
 
 import poker1 from '../assets/sideprojects/poker/poker1.png';
 import poker2 from '../assets/sideprojects/poker/poker2.png';
@@ -62,14 +64,28 @@ export const useDataStore = defineStore('data', {
       },
       images: string[],
     }[];
-    socials: SocialType[]
+    socials: SocialType[];
     assets: string[];
+    works: {
+      title: string,
+      location: string,
+      company: string,
+      time: string,
+      skills: string,
+      workDetails: string[],
+      proj: string[],
+    }[];
   }>({
     menu: [
       {
         label: 'menu.Aboutme',
         id: 'Aboutme',
         components: markRaw(AboutMe)
+      },
+      {
+        label: 'menu.WorkExperience',
+        id: 'WorkExperience',
+        components: markRaw(WorkExperience)
       },
       {
         label: 'menu.SkillsAndTools',
@@ -286,26 +302,77 @@ export const useDataStore = defineStore('data', {
       pg2,
       pg3,
       PGVideo
-    ]
+    ],
+    works: [
+      {
+        title: '全職 - 前端工程師',
+        location: '高雄, 台灣',
+        company: '坂和企業有限公司',
+        time: '2021/10 ~ Present',
+        skills: 'Vue.js / JavaScript / TypeScript / HTML / CSS / Node.js',
+        workDetails: [
+          '- 開發客製化系統網站', '- 跨團隊開發協作經驗(10人)', '- 開發自動部署腳本節省開發流程', '- 前端組件化開發保持擴充與可維護性'
+        ],
+        proj: [
+          '負責專案:', '3D立體動態選單首頁', '虛擬交易網站後台客服管理系統', '電子名片', "英語社團分享平台", "後端Log查看系統"
+        ]
+      },
+      {
+        title: '兼職 - 程式教師',
+        location: '高雄, 台灣',
+        company: '蘋果芽數位科技有限公司',
+        time: '2019/02 ~ 2024/01',
+        skills: 'Vue.js / JavaScript / HTML / CSS / Python / Scratch',
+        workDetails: [
+          '- 程式語言教學', '- 輔助系統開發'
+        ],
+        proj: [
+          '負責專案:', '教師課堂輔助系統', 'HTML拖放介面', '資料庫整合'
+        ]
+      },
+      {
+        title: '實習 - 前端工程師',
+        location: '高雄, 台灣',
+        company: '美樂蒂文教科技興業股份有限公司',
+        time: '2018/10 ~ 2019/01',
+        skills: 'HTML5 / JavaScript / jQuery / CSS',
+        workDetails: [
+          '- 製作規格書以及 API 文件', '- 協助專案開發以及畫面切版'
+        ],
+        proj: [
+          '負責專案:', '線上英語教學平台'
+        ]
+      }
+    ],
   }),
   getters: {
     getMenu: (state) => state.menu,
     getTools: (state) => state.tools,
     getSideprojects: (state) => state.sideProjects,
     getSocials: (state) => state.socials,
+    getWorks: (state) => state.works,
   },
   actions: {
     handlehref(payload: {
       url?: string;
       mail?: string;
-    }) {
-      const { url, mail } = payload;
+      text?: string;
+    }, lang: 'zh-TW' | 'en-US') {
+      const { url, mail, text } = payload;
+
+      if (text && text === 'CV') {
+        cvHref(lang);
+        return;
+      }
 
       if (url) {
         window.open(url, '_blank');
+        return;
       }
+
       if (mail) {
         window.open(`mailto:${mail}`);
+        return;
       }
     },
     preloadImg() {

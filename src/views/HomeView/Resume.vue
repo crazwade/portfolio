@@ -1,46 +1,45 @@
 <script setup lang='ts'>
 import { ref, watch } from 'vue';
 import Contain from '../../components/Contain.vue';
-import pdf1 from '../../assets/resume/pdf1.png';
-import pdf1e from '../../assets/resume/pdf1-e.png';
-import pdf2 from '../../assets/resume/pdf2.png';
-import pdf2e from '../../assets/resume/pdf2-e.png';
+import resumeC from '../../assets/resume/resume-c.png';
+import resumeE from '../../assets/resume/resume-e.png';
+import resumeCPDF from '../../assets/resume/履歷.pdf';
+import resumeEPDF from '../../assets/resume/resume.pdf';
 import { useI18n } from 'vue-i18n';
+import { cvHref } from '../../common/cvHref';
 
 const { t, locale } = useI18n();
+const lang = ref<'zh-TW' | 'en-US'>('zh-TW');
 
 const resume = ref([
-  pdf1, pdf2
+  resumeC, resumeE
 ]);
 
 watch(() => locale.value, () => {
   if (locale.value === 'en-US') {
     resume.value = [
-      pdf1e, pdf2e
+      resumeE, resumeC
     ];
+    lang.value = 'en-US';
   }
 
   if (locale.value  === 'zh-TW') {
     resume.value = [
-      pdf1, pdf2
+      resumeC, resumeE
     ];
+    lang.value = 'zh-TW';
   }
 });
 
 const downloadPDFs = () => {
-  resume.value.forEach((pdfUrl, index) => {
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = `jackywu-resume-page${index + 1}.png`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
+  const link = document.createElement('a');
+  link.href = locale.value === 'en-US' ? resumeEPDF : resumeCPDF;
+  link.download = locale.value === 'en-US' ? 'Jacky Wu Resume.pdf' : '吳國揚_履歷.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 };
 
-const hrefTo = (url: string) => {
-  window.open(url, '_blank');
-};
 </script>
 
 <template>
@@ -66,7 +65,7 @@ const hrefTo = (url: string) => {
           </div>
           <div
             class="flex flex-row justify-between items-center p-2 text-fontColor bg-backgroundColor border-[1px] border-fontColor gap-2 cursor-pointer hover:opacity-80 select-none"
-            @click="hrefTo('https://crazwade.github.io/profile/')"
+            @click="cvHref(lang)"
           >
             <i class="pi pi-eye"></i>
             {{ t('查看') }}

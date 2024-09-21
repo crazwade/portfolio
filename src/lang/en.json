@@ -9,7 +9,8 @@
     "SkillsAndTools": "Tools",
     "SideProject": "Projects",
     "Resume": "Resume",
-    "ContactMe": "Contact"
+    "ContactMe": "Contact",
+    "WorkExperience": "Work Experience"
   },
   "aboutme": {
     "name": "Jacky Wu",
@@ -21,7 +22,7 @@
     "info": [
       "I am Jacky Wu, a graduate of the Department of Information Management at National University of Kaohsiung in 2019. During my high school years, I studied abroad in the United States for one year. In college, I transferred from I-Shou University to National University of Kaohsiung, and my diverse academic experiences have cultivated my ability to think independently and reflect on myself.",
       "During my college years, I was enthusiastic about practical courses and actively participated in practical projects. In my senior year, I had the opportunity to be responsible for developing the international student recruitment system for the university, accumulating full-stack development experience and developing an interest in front-end development.",
-      "After graduation, I continued to devote myself to the field of front-end development and have accumulated three years of work experience. I specialize in the Vue framework, responsible for system page design, writing front-end specification documents, user interaction design, and back-end API integration. At the same time, I actively learn new technologies, proficient in TypeScript, Vue3, Eslint, and other tools, and can use these technologies to optimize the development process and improve development efficiency.",
+      "After graduation, I continued to devote myself to the field of front-end development and have accumulated three years of work experience. I specialize in the VueJs framework, responsible for system page design, writing front-end specification documents, user interaction design, and back-end API integration. At the same time, I actively learn new technologies, proficient in TypeScript, Vue3, Eslint, and other tools, and can use these technologies to optimize the development process and improve development efficiency.",
       "In the future, I hope to become an excellent engineer and gradually achieve the following goals:",
       "1-5 years: Become an engineer who can independently solve problems and learn quickly.",
       "5-8 years: Become a technical supervisor with leadership skills who can lead a team to complete projects.",
@@ -45,5 +46,32 @@
       "MiniGamePlaygroundinfo": "A collection of mini-games developed using Vue 3. It includes classic games like 1A2B, Minesweeper, and a Canvas drawing board.",
       "國立高雄大學線上申請系統info": "Designed for international students and administrative staff. The system facilitates online applications and provides comprehensive front-end and back-end functionalities to streamline the application process."
     }
+  },
+  "WorkExperience": {
+    "全職 - 前端工程師": "Full Time - Frontend Developer",
+    "高雄, 台灣": "Kaohsiung, Taiwan",
+    "坂和企業有限公司": "Sakawa Technology Co., LTD.",
+    "- 開發客製化系統網站": "- Developed custom web applications",
+    "- 跨團隊開發協作經驗(10人)": "- Collaborated with cross-functional teams of 10+ members",
+    "- 開發自動部署腳本節省開發流程": "- Automated deployment processes to streamline development workflows",
+    "- 前端組件化開發保持擴充與可維護性": "- Implemented component-based architecture for enhanced scalability and maintainability",
+    "負責專案:": "Projects:",
+    "3D立體動態選單首頁": "1. 3D Interactive Home Menu",
+    "虛擬交易網站後台客服管理系統": "2. C2C Virtual Trading Platform + Backend Customer Management System",
+    "電子名片": "3. Internal Systems: Digital Business Card",
+    "英語社團分享平台": "4. Internal Systems: English Sharing Community",
+    "後端Log查看系統": "5. Internal Systems: Backend Log Viewer",
+    "兼職 - 程式教師": "Part Time - Programming Instructor",
+    "蘋果芽數位科技有限公司": "AppleBuds Inc.",
+    "- 程式語言教學": "- Taught programming languages",
+    "- 輔助系統開發": "- Assisted in system development",
+    "教師課堂輔助系統": "1. Teacher's Classroom Assistant System",
+    "HTML拖放介面": "a. Developed a drag-and-drop interface for flexible student seating arrangements, enhancing teaching efficiency",
+    "資料庫整合": "b. Integrated with a database to automatically generate basic student contact records, minimizing human errors such as mismatched student names or progress",
+    "實習 - 前端工程師": "Intern - Frontend Developer",
+    "美樂蒂文教科技興業股份有限公司": "MELODY PUBLISHING CO., LTD.",
+    "- 製作規格書以及 API 文件": "- Created technical specifications and API documentation",
+    "- 協助專案開發以及畫面切版": "- Assisted in project development and front-end slicing",
+    "線上英語教學平台": "1. Contributed to the development of an online platform for English language learning"
   }
 }

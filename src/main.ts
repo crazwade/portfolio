@@ -10,10 +10,12 @@ import { createI18n } from 'vue-i18n';
 import { langFile } from './lang';
 import type { Lang } from './lang/index';
 
+const isChinese = navigator.language.includes('zh');
+
 type MessageSchma = typeof langFile.en & typeof langFile.zh;
 
 const i18n = createI18n<[MessageSchma], Lang>({
-  locale: 'zh-TW',
+  locale: isChinese ? 'zh-TW' : 'en-US',
   fallbackLocale: 'en-US',
   legacy: false,
   messages: {

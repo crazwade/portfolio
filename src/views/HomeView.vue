@@ -5,7 +5,7 @@ const dataStore = useDataStore();
 </script>
 
 <template>
-  <div class="flex flex-col gap-16">
+  <div class="flex flex-col gap-16 h-full">
     <template v-for="(item, index) in dataStore.getMenu" :key="index">
       <component :is="item.components" />
     </template>

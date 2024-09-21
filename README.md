@@ -6,13 +6,23 @@ Hi 👋, I'm Jacky Wu!  這是我的個人形象網站
 
 [![My Skills](https://skillicons.dev/icons?i=ts,vue,vite,tailwindcss,pinia,scss,vscode)](https://skillicons.dev)
 
-## PC
+## 功能引導
+
+- 語言切換
+  - 支援中英文切換
+[<img src="https://github.com/user-attachments/assets/03308e04-4827-412c-a33c-975d6fbca29f" height="300"/>](image.png)
+
+- 主題切換
+  - 支援三種不同主題切換
+[<img src="https://github.com/user-attachments/assets/206a3d11-a83d-4211-bd6c-e8fd7d719f55" height="300"/>](image.png)
+
+## PC 版本畫面
 
 [<img src="https://github.com/user-attachments/assets/f2fae869-c3ac-4623-b98b-5278ff396433" height="500"/>](image.png)
 [<img src="https://github.com/user-attachments/assets/4a49b441-1a17-4eeb-989b-150ec50ead3d" height="500"/>](image.png)
 [<img src="https://github.com/user-attachments/assets/9c734c79-0d64-4d29-862f-47044295f8c3" height="500"/>](image.png)
 
-## Mobile
+## Mobile 版本畫面
 
 <div style='display: flex;'> 
   <img src="https://github.com/user-attachments/assets/e8624175-03ec-4c52-8e13-b03a6f928b90" height="400" alt="crazwade" /> 
@@ -43,4 +53,3 @@ npm run build
 - Pinia
 - Eslint
 - TailwindCSS
-- Element Plus
