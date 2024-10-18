@@ -28,6 +28,9 @@ import pg1 from '../assets/sideprojects/pg/pg1.png';
 import pg2 from '../assets/sideprojects/pg/pg2.png';
 import pg3 from '../assets/sideprojects/pg/pg3.png';
 import PGVideo from '../assets/sideprojects/pg/PGVideo.gif';
+import cms1 from '../assets/sideprojects/cms/cms1.jpg';
+import cms2 from '../assets/sideprojects/cms/cms2.jpg';
+import cmsVideo from '../assets/sideprojects/cms/cmsVideo.gif';
 
 type SocialType = {
   type: 'icon';
@@ -225,6 +228,20 @@ export const useDataStore = defineStore('data', {
         link: {
           demo: 'https://crazwade.github.io/LogViewer/',
           repo: 'https://github.com/crazwade/LogViewer',
+        }
+      },
+      {
+        name: '教師課堂輔助系統',
+        skills: ['Vue 3', 'Vite', 'Drag and Drop', 'Tailwind CSS'],
+        info: '教師課堂輔助系統info',
+        images: [
+          cmsVideo,
+          cms1,
+          cms2,
+        ],
+        link: {
+          demo: 'https://crazwade.github.io/CSR/',
+          repo: 'https://github.com/crazwade/CSR',
         }
       },
       {
