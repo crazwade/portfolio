@@ -84,6 +84,8 @@ export const useDataStore = defineStore('data', {
       workDetails: string[],
       proj: string[],
     }[];
+    loading: boolean;
+    process: number;
   }>({
     menu: [
       {
@@ -336,7 +338,16 @@ export const useDataStore = defineStore('data', {
       pg1,
       pg2,
       pg3,
-      PGVideo
+      PGVideo,
+      cms1,
+      cms2,
+      cmsVideo,
+      m1,
+      m2,
+      m3,
+      m4,
+      m5,
+      m6
     ],
     works: [
       {
@@ -379,6 +390,8 @@ export const useDataStore = defineStore('data', {
         ]
       }
     ],
+    loading: false,
+    process: 0
   }),
   getters: {
     getMenu: (state) => state.menu,
@@ -386,6 +399,8 @@ export const useDataStore = defineStore('data', {
     getSideprojects: (state) => state.sideProjects,
     getSocials: (state) => state.socials,
     getWorks: (state) => state.works,
+    isLoading: (state) => state.loading,
+    getProcess: (state) => state.process
   },
   actions: {
     handlehref(payload: {
@@ -410,11 +425,21 @@ export const useDataStore = defineStore('data', {
         return;
       }
     },
-    preloadImg() {
-      imageLoader(this.assets, (loaded, total) => {
-        const progressBar = `圖片預載入進度:${loaded}/${total}`;
-        console.log(progressBar);
-      });
+    async preloadImg() {
+      this.startLoading();
+
+      await imageLoader(this.assets, (loaded, total) => {
+        this.process = Math.floor((loaded / total) * 100);
+      })
+        .finally(() => {
+          this.stopLoading();
+        });
+    },
+    startLoading() {
+      this.loading = true;
+    },
+    stopLoading() {
+      this.loading = false;
     }
   },
 });

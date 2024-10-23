@@ -27,13 +27,12 @@ export const imageLoader = (
         const image = new Image();
         image.onload = () => {
           loadedImages++;
+
           if (onProgress) {
             onProgress(loadedImages, totalImages);
           }
 
-          if (loadedImages === totalImages) {
-            resolve();
-          }
+          resolve();
         };
         image.onerror = (error) => {
           onError && onError(error, url);
@@ -45,9 +44,13 @@ export const imageLoader = (
 
     Promise.all(promises)
       .then(() => {
-        resolve();
+        console.log('resolve');
+        setTimeout(() => {
+          resolve();
+        }, 1000);
       })
       .catch(error => {
+        console.log('catch');
         reject(error);
       });
   });

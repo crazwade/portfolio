@@ -1,6 +1,10 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import { ref } from 'vue';
 import Header from './Header.vue';
+import LoadingDIalog from '../components/LoadingDIalog.vue';
+import { useDataStore } from '../stores/data';
+
+const dataStore = useDataStore();
 
 const isOpen = ref(false);
 
@@ -14,13 +18,20 @@ const scrollTo = () => {
 </script>
 
 <template>
-  <div id="layout" class="w-full h-full overflow-auto">
+  <div
+    id="layout"
+    class="w-full h-full relative"
+    :class="[dataStore.isLoading ? 'overflow-hidden' : 'overflow-auto']"
+  >
     <!-- 內容 -->
-    <div class="mt-[70px] w-full h-full" :class="{ 'blur-sm' : isOpen }">
+    <div class="mt-[70px] w-full h-full" :class="{ 'blur-sm': isOpen }">
       <slot />
     </div>
     <!-- goto top -->
-    <div class="fixed bottom-5 right-5 cursor-pointer bg-borderColor p-2 opacity-80 hover:opacity-100" :class="{ 'blur-sm' : isOpen }">
+    <div
+      class="fixed bottom-5 right-5 cursor-pointer bg-borderColor p-2 opacity-80 hover:opacity-100"
+      :class="{ 'blur-sm': isOpen }"
+    >
       <i
         class="pi pi-angle-double-up"
         style="font-size: 30px"
@@ -29,9 +40,9 @@ const scrollTo = () => {
     </div>
     <!-- header -->
     <Header @menuVisable="isOpen = !isOpen" :isOpen="isOpen" />
+    <!-- loading -->
+    <LoadingDIalog v-if="dataStore.isLoading" />
   </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
