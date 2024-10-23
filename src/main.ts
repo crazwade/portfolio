@@ -10,6 +10,8 @@ import { createI18n } from 'vue-i18n';
 import { langFile } from './lang';
 import type { Lang } from './lang/index';
 
+import veProgress from "vue-ellipse-progress";
+
 const isChinese = navigator.language.includes('zh');
 
 type MessageSchma = typeof langFile.en & typeof langFile.zh;
@@ -32,5 +34,6 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(router);
 app.use(i18n);
+app.use(veProgress);
 
 app.mount('#app');
