@@ -37,7 +37,8 @@
       "教師課堂輔助系統": "Classroom Assistance System",
       "星球作品集": "Dynamic 3D Menu",
       "MiniGamePlayground": "Mini Game Playground",
-      "國立高雄大學線上申請系統": "NUK International Student Application System"
+      "國立高雄大學線上申請系統": "NUK International Student Application System",
+      "梅竹黑客松2024": "新竹觀光智慧客製路線"
     },
     "info": {
       "撲克牌組合分析器info": "An interactive web application that demonstrates various combinations of poker cards and provides detailed analysis. Users can easily explore the results through an intuitive interface.",
@@ -46,7 +47,8 @@
       "教師課堂輔助系統info": "A system that assists teachers in classroom management. It utilizes a drag-and-drop interface for seating arrangements and automatically generates student attendance records, reducing errors and typos.",
       "星球作品集info": "A dynamic 3D menu that utilizes CSS3 transforms to display planets of varying sizes. This interactive menu is fully responsive, allowing users to dynamically adjust the number and position of planets on any screen size.",
       "MiniGamePlaygroundinfo": "A collection of mini-games developed using Vue 3. It includes classic games like 1A2B, Minesweeper, and a Canvas drawing board.",
-      "國立高雄大學線上申請系統info": "Designed for international students and administrative staff. The system facilitates online applications and provides comprehensive front-end and back-end functionalities to streamline the application process."
+      "國立高雄大學線上申請系統info": "Designed for international students and administrative staff. The system facilitates online applications and provides comprehensive front-end and back-end functionalities to streamline the application process.",
+      "梅竹黑客松2024info": "2024 Meichu Hackathon: Integrating Hsinchu City Government OpenData for Customized Tourism Route Planning"
     }
   },
   "WorkExperience": {

@@ -6,8 +6,8 @@
 export const cvHref = (lang: 'zh-TW' | 'en-US') => {
   window.open(
     lang === 'en-US'
-    ? 'https://drive.google.com/file/d/147CWcvyH0o-VCIuxT6-3RpB_TxR_F2gs/view?usp=sharing'
-    : 'https://drive.google.com/file/d/1V3q3MEwaY5FHqdYxGGZu4Q_clysQ8hg_/view?usp=sharing',
+    ? 'https://drive.google.com/file/d/12dUF1QSWYwSRFKkwQqeBhpnlh_z_bUFr/view?usp=sharing'
+    : 'https://drive.google.com/file/d/1R7mmJz8kMIhvWxDg64K8N2T9WsDdpFRB/view?usp=sharing',
     '_blank'
   );
 };
