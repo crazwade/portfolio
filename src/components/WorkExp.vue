@@ -50,12 +50,14 @@ defineProps<{
               </div>
             </div>
           </div>
+          <!-- 工作內容 -->
           <div>
             <div v-for="(workdetail, index) in item.workDetails" :key="index" class="sm:text-base text-sm">
               {{ t('WorkExperience.' + workdetail) }}
             </div>
           </div>
-          <div class="pt-4 max-w-[800px] sm:text-base text-sm">
+          <!-- 負責專案 -->
+          <div class="pt-4 max-w-[800px] sm:text-base text-sm font-mono">
             <div v-for="(proj, index) in item.proj" :key="index">
               {{ t('WorkExperience.' + proj) }}
             </div>

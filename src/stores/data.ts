@@ -194,6 +194,21 @@ export const useDataStore = defineStore('data', {
 
         svg: svgs.elementplus,
       },
+      {
+        label: 'C#',
+
+        svg: svgs.cSharp,
+      },
+      {
+        label: 'NET Core',
+
+        svg: svgs.netcore,
+      },
+      {
+        label: 'Oracle',
+
+        svg: svgs.oracle,
+      },
     ],
     sideProjects: [
       {
@@ -351,10 +366,23 @@ export const useDataStore = defineStore('data', {
     ],
     works: [
       {
+        title: '全職 - 軟體工程師',
+        location: '高雄, 台灣',
+        company: '日月光半導體製造股份有限公司',
+        time: '2025/01 ~ Present',
+        skills: 'Vue.js / JavaScript / C# / ASP.NET / Oracle / MySQL ',
+        workDetails: [
+          '- 營運系統開發整合', '- 優化前端 UI/UX 提升使用者使用率約 60%', '- 建立前後端分離架構，提高開發效率'
+        ],
+        proj: [
+          '負責專案:', '原物料倉儲管理系統', '發收中心包裹系統', '廠區即時運輸派車系統', "組內前端架構模板設計"
+        ]
+      },
+      {
         title: '全職 - 前端工程師',
         location: '高雄, 台灣',
         company: '坂和企業有限公司',
-        time: '2021/10 ~ Present',
+        time: '2021/10 ~ 2025/01',
         skills: 'Vue.js / JavaScript / TypeScript / HTML / CSS / Node.js',
         workDetails: [
           '- 開發客製化系統網站', '- 跨團隊開發協作經驗(10人)', '- 開發自動部署腳本節省開發流程', '- 前端組件化開發保持擴充與可維護性'
