@@ -194,6 +194,21 @@ export const useDataStore = defineStore('data', {
 
         svg: svgs.elementplus,
       },
+      {
+        label: 'C#',
+
+        svg: svgs.cSharp,
+      },
+      {
+        label: 'NET Core',
+
+        svg: svgs.netcore,
+      },
+      {
+        label: 'Oracle',
+
+        svg: svgs.oracle,
+      },
     ],
     sideProjects: [
       {

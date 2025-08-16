@@ -11,6 +11,9 @@ import tailwindcss from './tailwindcss.svg';
 import Pinia from './pinia.svg';
 import i18n from './i18n.svg';
 import vitest from './vitest.svg';
+import cSharp from './Logo_C_sharp.svg.png';
+import netcore from './NET_Core_Logo.svg.png';
+import oracle from './oracle.png';
 
 export const svgs = {
   elementplus,
@@ -25,5 +28,8 @@ export const svgs = {
   tailwindcss,
   Pinia,
   i18n,
-  vitest
+  vitest,
+  cSharp,
+  netcore,
+  oracle,
 };
